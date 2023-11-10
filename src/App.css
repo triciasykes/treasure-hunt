@@ -1,9 +1,55 @@
-h1 {
-  text-align: center;
+body {
+  background-color: darkred;
 }
 
 .square {
   height: 200px;
   width: 200px;
   border: 1px solid black;
+  font-size: 10rem;
+  text-align: center;
+  background-color: darkgoldenrod;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 610px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.play-again {
+  margin: 0 auto;
+  background-color: cornflowerblue;
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+}
+
+.spacer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.counter {
+  display: inline-flex;
+}
+
+.count-number {
+  font-weight: 900;
+  padding-left: 7px;
+}
+
+.message {
+  font-size: 2rem;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #fff;
 }
