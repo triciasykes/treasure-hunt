@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+import Sidebar from "./components/Sidebar"
 import Square from "./components/Square"
 
 import "./App.css"
@@ -80,26 +81,30 @@ const App = () => {
   return (
     <>
       <div className="message">{message}</div>
-      <div className="board">
-        {board.map((value, index) => {
-          return (
-            <Square
-              val={value}
-              index={index}
-              clickOnBoard={clickOnBoard}
-              counter={counter}
-              endGame={endGame}
-              key={index}
-            />
-          )
-        })}
-        <div className="spacer">
-          <button className="play-again" onClick={restartGame}>
-            Play Again!
-          </button>
-          <div className="counter">
-            Turns Remaining:<div className="count-number">{count}</div>{" "}
-          </div>
+      <div className="wrapper">
+        <Sidebar />
+        <div className="board">
+          {board.map((value, index) => {
+            return (
+              <Square
+                val={value}
+                index={index}
+                clickOnBoard={clickOnBoard}
+                counter={counter}
+                endGame={endGame}
+                key={index}
+              />
+            )
+          })}
+        </div>
+        <Sidebar />
+      </div>
+      <div className="spacer">
+        <button className="play-again" onClick={restartGame}>
+          Play Again!
+        </button>
+        <div className="counter">
+          Turns Remaining:<div className="count-number">{count}</div>{" "}
         </div>
       </div>
     </>
